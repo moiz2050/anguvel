@@ -1,0 +1,25 @@
+<h2>Customers</h2>
+<table>
+    <tbody>
+    <tr ng-repeat="customer in customers">
+        <td>{{ customer.id }}</td>
+        <td>
+            <a ng-click="removeCustomer(customer.id)">[-]</a>
+            <a href="#/customer/{{ customer.id }}">
+                {{ customer.first_name }} {{ customer.last_name }}
+            </a>
+        </td>
+        <td>{{ customer.email }}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td></td>
+        <td><input ng-model="newCustomer.name" style="width: 99%"></td>
+        <td><input ng-model="newCustomer.email" style="width: 170px"><a ng-click="addCustomer()">[+]</a></td>
+    </tr>
+    </tfoot>
+</table>
+<p ng-show="error" class="error">
+    {{ error }}
+</p>
