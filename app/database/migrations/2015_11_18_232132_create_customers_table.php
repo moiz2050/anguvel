@@ -5,13 +5,13 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateCustomersTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
         Schema::create('customers', function ($table) {
             $table->increments('id');
             $table->string('first_name');
@@ -19,16 +19,16 @@ class CreateCustomersTable extends Migration {
             $table->string('email')->unique();
             $table->timestamps();
         });
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
         Schema::drop('customers');
-	}
+    }
 
 }

@@ -9,13 +9,13 @@ app.config(function configure($routeProvider) {
 
 app.factory('Data', function Data($http) {
     return {
-        getCustomers: function getCustomers() { return $http.get('/angular-laravel/public/customers/all')},
-        getCustomer: function getCustomer(id) { return $http.get('/angular-laravel/public/customers?id='+id); },
-        addCustomer: function addCustomer(data) { return $http.post('/angular-laravel/public/customers',data); },
-        getTransactions: function getTransactions(id) { return $http.get('/angular-laravel/public/transactions?id='+id); },
-        addTransaction: function addTransaction(data) { return $http.post('/angular-laravel/public/transactions',data); },
-        removeTransaction: function removeTransaction(id) { return $http.delete('/angular-laravel/public/transactions?id='+ id); },
-        removeCustomer: function removeCustomer(id) { return $http.delete('/angular-laravel/public/customers?id='+ id); }
+        getCustomers: function getCustomers() { return $http.get('/anguvel/public/customers/all')},
+        getCustomer: function getCustomer(id) { return $http.get('/anguvel/public/customers?id='+id); },
+        addCustomer: function addCustomer(data) { return $http.post('/anguvel/public/customers',data); },
+        getTransactions: function getTransactions(id) { return $http.get('/anguvel/public/transactions?id='+id); },
+        addTransaction: function addTransaction(data) { return $http.post('/anguvel/public/transactions',data); },
+        removeTransaction: function removeTransaction(id) { return $http.delete('/anguvel/public/transactions?id='+ id); },
+        removeCustomer: function removeCustomer(id) { return $http.delete('/anguvel/public/customers?id='+ id); }
     }
 });
 
